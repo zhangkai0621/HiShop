@@ -1,0 +1,98 @@
+    /* banner */
+    .banner{
+        height: 350px;
+        background: url(img/banner1.jpg) no-repeat;
+        background-size:cover; 
+        position: relative;
+    }
+    .banner>img{
+       width: 100%;
+    }
+    .banner_bottom{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0;   
+    }
+    .banner-df a{
+        color: #fff ;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        display: flex;
+    }
+    .banner-df{
+        display: flex;
+        justify-content:space-between;
+    }
+    .banner-df>div{
+        padding: 0.7rem;
+        border-right: 0.03rem solid #999;
+    }
+    /* 图标宽度&&每个项目的宽度 */
+    .banner-df>div,.banner-df img{
+        width:20%;
+    }
+    /* 文本部分 */
+    .banner-df>div div{
+        padding-left:0.5rem; 
+    }
+    .banner-df span{
+        font-size: 0.65rem;
+    }
+    /* 免费注册 */
+    .banner-df a:last-child{
+        justify-content: space-around;
+   }
+   .banner-df>div div:last-child{
+    padding-left:0; 
+    }
+    /* 社区团购系统 */
+    .system{
+        color: #fff;
+        margin-top:2rem !important; 
+        display: flex;
+        justify-content: space-between;
+    }
+    .system>div{
+        padding: 1rem 3rem;
+        display: flex;
+        flex-flow:column nowrap;
+        align-items: center; 
+    }
+    /* 社区团购系统 */
+    .system>div:first-child{
+        background:url(img/bg1.png) no-repeat;
+        background-size: cover;
+    }
+    /* 新零售·门店通 */
+    .system>div:last-child{
+        background:url(img/bg2.png) no-repeat;
+        background-size: cover;
+    }
+    .system>div:first-child a,.system>div:last-child a{
+        font-size: 0.6rem;
+        border: 0.1rem solid #fff;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.2rem;
+    }
+    /* 左边免费注册 */
+    .system>div:first-child a:nth-child(2){
+        background: #0A6DEE;
+        border: 0.1rem solid #0a6dee;  
+    }
+    /* 右边免费注册 */
+    .system>div:last-child a:nth-child(2){
+        background: #fff;
+        color: #0a6dee;
+        border: 0.1rem solid #fff;
+    }
+    .system>div div{
+        margin: 1rem;
+    }
+    .system h1,.system p,.system a{
+        margin: 0.2rem;
+        color: #fff;
+    }
+    .system p{
+        font-size: 0.8rem;
+    }

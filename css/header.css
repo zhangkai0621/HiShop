@@ -1,0 +1,70 @@
+    .head>div{
+        background: #f2f2f2;
+    }
+    /* 头部热线 */
+    .width{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .head_top {
+        padding: 0.3rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .head_top p,.head_top li{
+        font-size: 0.6rem;
+        float: left;
+    }
+    .head_top li{
+        color: #EB1308;
+        padding-left:0.5rem; 
+    }
+    /* 头部logo&&导航栏 */
+    .nav {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav a{
+        font-size: 0.7rem;
+        vertical-align: middle;
+    }
+    /* logo图片样式 */
+    .nav a:first-child img{
+        width: 75%;
+    }
+    .drop_img{
+        width: 12%;
+    }
+    /* 登录 */
+    .nav a:nth-child(9){
+        font-size: 0.65rem; 
+        padding: 0.1rem 0.9rem; 
+        border: 0.05rem solid #999;  
+        border-radius: 0.2rem;
+        align-self: flex-end;
+        transition: 0.4s;
+    }
+    .nav a:nth-child(7){
+        color: #EB1308;
+    }
+    .nav a:nth-child(9):hover{
+        background: #0A6DEE;
+        color: #fff;
+        border: 0.05rem solid #0A6DEE;
+    }
+    /* 注册 */
+    .nav a:last-child{
+        font-size: 0.65rem;
+        border: 0.05rem solid #0A6DEE; 
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.2rem;
+        background: #0A6DEE;
+        color: #fff;    
+        align-self: flex-end;    
+    }
+    
+    
+    
+    
