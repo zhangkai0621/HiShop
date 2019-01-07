@@ -49,11 +49,12 @@
     /* 社区团购系统 */
     .system{
         color: #fff;
-        margin-top:2rem !important; 
+        margin-top:3rem !important; 
         display: flex;
         justify-content: space-between;
     }
     .system>div{
+        width:37%;
         padding: 1rem 3rem;
         display: flex;
         flex-flow:column nowrap;
@@ -99,6 +100,7 @@
     /* 商城系统 */
     .shopSystem{
         margin-top:3rem !important;
+        margin-bottom:10rem !important;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
@@ -122,6 +124,7 @@
      /* 零售系统a 标签 */
      .shopa{
         margin-top:1rem;
+        margin-bottom: 2rem;
         width: 70%;
         display: flex;
         justify-content: space-around;
@@ -149,13 +152,76 @@
     }
     /* 移动云商场 */
     .shopMenu{
-        border:1px solid #000;
         display: flex;
         justify-content: space-around;
+        
     }
     .shopMenu img{
         width: 80%;
+        margin-bottom:0.5rem;
+        margin-top:1rem; 
     }
+    /* 蓝色-移动云商城 */
     .cloudShop>div:first-child{
         background: #0a6dee;
+        padding: 2rem 4rem;
+        box-shadow: #0A6DEE 0.2rem 0rem 1rem;
+    }
+    .cloudShop>div:last-child{
+        padding: 2rem 0.5rem 2rem 3rem;
+        font-size: 0.8rem;
+        box-shadow: #0A6DEE 0.2rem 0.2rem 1rem;
+    }
+    .cloudShop>div:last-child h3{
+        color: #0A6DEE;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+    .cloudShop>div:last-child li{
+        list-style: disc;
+        padding: 0.5rem 0;
+    }
+    .a-btn{
+        display: inline-block;
+        font-size: 1rem;
+        padding:0.4rem 1rem;
+        margin-top: 1rem; 
+        border: 0.05rem solid #bfbfbf;
+        border-radius: 0.3rem;
+        transition: 0.4s;
+    }
+    .a-btn:hover{
+        background: #0A6DEE;
+        color: #fff;
+        border: 0.05rem solid #0A6DEE;
+    }
+    .cloudShop>div p{
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom:1rem;
+    }
+    .shopOthers,.cloudShop>div:first-child{
+        text-align: center;
+        
+    }
+    /* 其他三个 */
+    .shopOthers>div:first-child{
+        background: #f3f3f3;
+        margin-top: 2rem;
+        padding: 2rem 0;
+        border: 1px solid #E5E5E5;
+    }
+    .shopOthers>div:first-child p{
+        font-size: 0.9rem;
+        color: #000;
+    }
+    .shopOthers>div:last-child{
+        padding-top:4rem;  
+        padding-bottom: 3rem; 
+        border: 1px solid #E5E5E5; 
+    }
+    .shopOthers>div:last-child p{
+        font-size: 0.9rem;
+        padding: 0.2rem;
+        color: #8d8d8d;
     }
