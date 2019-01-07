@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #left{
+            width:400px;
+            height:800px;
+            background:#faf;
+            position:fixed;
+            left:0;
+            top:0;
+            display:none;
+        }
+       #dropmenu{
+           width:48px;
+           height:48px;
+           background:url(subject.png);
+           position:fixed;
+           left:20px;
+           top:0;
+           z-index:10;//菜单按钮的层叠在菜单栏的上方
+       } 
+    </style>
+</head>
+<body>
+    <div id="left"></div>
+     <div id="dropmenu" class="block"></div>
+
+    <script>
+        dropmenu.onclick=function(){
+            if(dropmenu.ClassName=="block"){
+                //class名作为判断条件，如果class="block",点击div显示
+                left.style.display="block";//div显示
+                dropmenu.style.background="url(clear.png)";//背景图片变成X
+                dropmenu.ClassName="none";//div显示之后，class名改变
+            }else{
+                //如果class不为block，点击事件为隐藏
+                left.style.display="none";//div隐藏
+                dropmenu.style.background="url(subject.png)";
+                dropmenu.ClassName="block";//隐藏之后，class重新变回block
+            }
+        }
+    </script>
+</body>
+</html>
