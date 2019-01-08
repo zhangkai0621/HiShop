@@ -12,7 +12,7 @@
         justify-content: space-between;
     }
     .head_top p,.head_top li{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         float: left;
     }
     .head_top li{
@@ -27,7 +27,7 @@
         align-items: center;
     }
     .nav a{
-        font-size: 0.7rem;
+        font-size: 1rem;
         vertical-align: middle;
     }
     /* logo图片样式 */
@@ -39,8 +39,8 @@
     }
     /* 登录 */
     .nav a:nth-child(9){
-        font-size: 0.65rem; 
-        padding: 0.1rem 0.9rem; 
+        font-size: 1rem; 
+        padding: 0.1rem 1.3rem; 
         border: 0.05rem solid #999;  
         border-radius: 0.2rem;
         align-self: flex-end;
@@ -56,7 +56,7 @@
     }
     /* 注册 */
     .nav a:last-child{
-        font-size: 0.65rem;
+        font-size: 1rem;
         border: 0.05rem solid #0A6DEE; 
         padding: 0.1rem 0.3rem;
         border-radius: 0.2rem;
