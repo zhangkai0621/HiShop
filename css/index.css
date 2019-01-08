@@ -169,6 +169,7 @@
     .cloudShop{
         width: 34%;
     }
+    /* 蓝色-移动云商城 */
     .cloudShop>div:first-child{
         padding: 1rem;
         background: #0a6dee;
