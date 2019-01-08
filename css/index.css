@@ -1,3 +1,13 @@
+    .h3{
+        color: #343434;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    .p{
+        color: #5c5c5c;
+        font-size: 0.7rem;
+        margin:0.5rem 0; 
+    }
     /* banner */
     .banner{
         height: 350px;
@@ -49,11 +59,12 @@
     /* 社区团购系统 */
     .system{
         color: #fff;
-        margin-top:2rem !important; 
+        margin-top:3rem !important; 
         display: flex;
         justify-content: space-between;
     }
     .system>div{
+        width:37%;
         padding: 1rem 3rem;
         display: flex;
         flex-flow:column nowrap;
@@ -99,20 +110,17 @@
     /* 商城系统 */
     .shopSystem{
         margin-top:3rem !important;
+        margin-bottom:3rem !important;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items: center;
     }
-    /* h3 */
-    .shopSystem h3{
-        color: #343434;
-        font-weight: 400;
-        font-size: 1.5rem;
-    }.shopSystem p{
+    /* h3 */ 
+    .shopSystem p{
         color: #5c5c5c;
         font-size: 0.7rem;
-        margin:0.5rem 0; 
+        margin:0.5rem 0;
     }
     .shopSystem span{
         color: #F33205;
@@ -122,6 +130,7 @@
      /* 零售系统a 标签 */
      .shopa{
         margin-top:1rem;
+        margin-bottom: 2rem;
         width: 70%;
         display: flex;
         justify-content: space-around;
@@ -149,13 +158,110 @@
     }
     /* 移动云商场 */
     .shopMenu{
-        border:1px solid #000;
         display: flex;
         justify-content: space-around;
+        
     }
     .shopMenu img{
-        width: 80%;
+        width: 70%;
+    }
+    /* 蓝色-移动云商城 */
+    .cloudShop{
+        width: 34%;
     }
     .cloudShop>div:first-child{
+        padding: 1rem;
         background: #0a6dee;
+        
     }
+    .cloudShop>div:last-child{
+        padding: 2rem 0 2rem 2rem;
+        border: 0.05rem solid #0a6dee;
+        border-top: none;
+        box-shadow: 0 0 1rem rgba(0, 198, 226, 0.5);
+    }
+    .cloudShop>div:last-child h3{
+        color: #0A6DEE;
+        font-weight: 600;
+      
+    }
+    .cloudShop>div:last-child li{
+        list-style: disc;
+        font-size: 0.7rem;
+        padding: 0.3rem 0;
+    }
+    .a-btn{
+        display: inline-block;
+        font-size: 0.7rem;
+        padding:0.4rem 1rem;
+        margin-top: 1rem; 
+        border: 0.05rem solid #bfbfbf;
+        border-radius: 0.3rem;
+        transition: 0.4s;
+    }
+    .a-btn:hover{
+        background: #0A6DEE;
+        color: #fff;
+        border: 0.05rem solid #0A6DEE;
+    }
+    .cloudShop>div p{
+        color: #fff;
+        
+    }
+    .shopOthers,.cloudShop>div:first-child{
+        text-align: center;  
+    }
+    /* 其他三个 */
+    .shopOthers{
+        width: 22%;
+        margin-top:1rem; 
+    }
+    .shopOthers>div:first-child{
+        background: #f3f3f3;
+        padding: 2.5rem   1rem;
+        border-right: 0.05rem solid #E5E5E5;
+        border-top: 0.05rem solid #E5E5E5;
+    }
+    .shopOthers>div:first-child p{
+        font-size: 0.6rem;
+        color: #000;
+    }
+    .shopOthers>div:last-child{
+        padding: 2.5rem   1rem;
+        border-right: 0.05rem solid #E5E5E5;
+        border-bottom: 0.05rem solid #E5E5E5;  
+    }
+    .shopOthers>div:last-child p{
+        color: #8d8d8d;
+    }
+
+    /* 微信营销小程序 */
+    .wechat img{
+       width: 80%;
+    }
+
+    .wechat>div:first-child{
+        text-align: center;
+    }
+    .wechat>div:last-child{
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .wechat_logo{
+        width: 10%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+       
+    }
+    .wechat_logo p{
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+    .wechat_logo span{
+        font-size: 0.6rem;
+        padding: 0 0.5rem;
+        color: #8d8d8d;
+    }
+    
