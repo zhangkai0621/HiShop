@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input</title>
+    <style>
+        input{
+            padding:0.5rem 0 0.5rem 1rem;
+            outline:none;
+            margin:1rem 0;
+        }
+        .red{
+            border:1px solid #f00;
+        }
+        .black{
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入账号">
+    <span></span><br>
+    <input type="password"  placeholder="请输入密码"></input>
+    <span></span>
+
+    <script>
+        window.onload=function(){
+            var inputs=document.getElementsByTagName("input");
+            for(var input of inputs){
+                input.onfocus=function(){
+                    var input=this;
+                    var span=input.nextElementSibling;
+                    if(input.className=="red"){
+                        input.className="red";
+                        span.innerHTML="这是必填项";
+                        span.style.color="red";
+                    }else
+                        input.className="black";
+                    
+                }
+                input.onblur=function(){
+                    var input=this;
+                    var span=input.nextElementSibling;
+                    if(input.value=="")
+                        input.className="red";
+                        span.innerHTML="这是必填项";
+                        span.style.color="red";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -8,6 +8,10 @@
         font-size: 1rem;
         margin:0.8rem 0; 
     }
+    .d-between{
+        display: flex;
+        justify-content:space-between;
+    }
     /* banner */
     .banner{
         height: 450px;
@@ -28,10 +32,6 @@
         color: #fff ;
         margin: 0 auto;
         display: flex;
-    }
-    .banner-df{
-        display: flex;
-        justify-content:space-between;
     }
     .banner-df>div{
         padding: 0.7rem;
@@ -59,8 +59,6 @@
     .system{
         color: #fff;
         margin-top:3rem !important; 
-        display: flex;
-        justify-content: space-between;
     }
     .system>div{
         width:40%;
@@ -110,9 +108,7 @@
     .shopSystem{
         margin-top:3rem !important;
         margin-bottom:3rem !important;
-        display: flex;
         flex-flow: column nowrap;
-        justify-content: space-around;
         align-items: center;
     }
     /* h3 */ 
@@ -131,8 +127,6 @@
         margin-top:1rem;
         margin-bottom: 2rem;
         width: 70%;
-        display: flex;
-        justify-content: space-around;
         align-items: center;
     }
     .shopa a{
@@ -157,10 +151,7 @@
     }
     /* 移动云商场 */
     .shopMenu{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        
+        width: 100%;  
     }
     .shopMenu img{
         width: 70%;
@@ -185,7 +176,6 @@
         font-size: 1.5rem;
         color: #0A6DEE;
         font-weight: 600;
-      
     }
     .cloudShop>div:last-child li{
         list-style: disc;
@@ -247,8 +237,6 @@
     }
     .wechat>div:last-child{
         margin: 3rem 0;
-        display: flex;
-        justify-content: space-between;
     }
     .wechat_logo{
         width: 10%;
@@ -282,7 +270,7 @@
         width: 5%;
         margin: 0 auto;
         clear: both;
-        border:0.2rem solid #858585;   
+        border:0.23rem solid #858585;   
     }
     /* 横线 */
     .solution>div:first-child span{
@@ -292,8 +280,6 @@
     }
     /* 解决方案-下方图片部分 */
     .solution-img{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 4rem;
     }
     .solution-img div{
@@ -313,14 +299,12 @@
     /* 客户案例 */
     .cases{
         margin-top:4rem;
-        padding: 3rem 0;
+        padding-top: 3rem;
         background: #404040;
     }
     .cases-logo>div{
         width: 100%;
         margin:1rem 0;
-        display: flex;
-        justify-content:space-between;
     }
     /* 图标透明度设置 */
     .cases-logo>div>div{
@@ -347,12 +331,189 @@
     .cases-details{
         color: #fff;
         padding: 5rem 0;
-        display: flex;
-        justify-content: space-between;
+        /* border: 2px solid #0A6DEE; */
     }
+    .cases-details>table>tbody>tr>th{
+        text-align: left;
+        font-size: 2rem;
+    }
+    .cases-details>table>tbody>tr>td{
+        padding:0.5rem 0;
+        text-align: left;
+        vertical-align: baseline;
+        width:8%;
+    }
+    .cases-details>table>tbody>tr>td:last-child{
+        width:100%;
+    }
+    .cases-details>table{
+        padding:2rem; 
+    }
+    /* 了解详情 */
     .btns{
         color: #fff;
         background: #F33205;
         border: 0.05rem solid #F33205;
     }
+    /* 我们的优势 */
+    .solution>div>p>red{
+        color: #F33205;
+        font-size: 1.1rem;
+    }
+    .advantage>div{
+        text-align: center;
+        padding: 1rem 3rem;
+    }
+    .advantage>div h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin:1rem 0;
+    }
+    .advantage>div p{
+        font-size: 0.8rem;
+        color: #8d8d8d;
+        margin-bottom:3rem;
+    }
+    /* 增值服务 */
+    .service{
+        background:url(img/fl06_bg.jpg) center bottom no-repeat#1a65c5;
+        padding-bottom:5rem; 
+    }
+    /* 增值服务的标题文本 */
+    .serTitle>h3{
+        color: #eff2f9;
+    }
+    .serTitle>p,
+    .serTitle>a{
+        color: #bbc9e5;
+    }
+    .serTitle>div{
+        border:0.2rem solid #a3bfe3 !important;
+    }
+    .serTitle>span{
+        border:0.05rem solid #a3bfe3 !important;
+    }
+
+    /* 增值服务图片logo */
+    .serImg{
+        text-align: center;
+        color: #fff;
+    }
+    .serImg>h3{
+        font-size: 1.5rem;
+        margin:1rem 0;
+        font-weight: 400;
+    }
+    .serImg>span,.serImg>a{
+        display: none;
+    }
+    /* 增值服务鼠标移入class */
+    .serChecked{
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 50%;
+        padding:2.05rem 0rem;
+        /* margin-top:-0.5rem; */
+        display: block;
+    }
+    .serChecked>h3{
+        color: #0A6DEE;
+    }
+    .serChecked>span{
+        display: inline-block;
+        width: 75%;
+        margin-top:1rem;
+    }
+    .serChecked>img{
+        display:none;
+    }
+    .serChecked>a{
+        display:block;
+        color: #F33205;
+        margin-top:1rem;
+    }
+    .checFather{
+        width:17%;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+    .checFatherDn{
+        border:none;
+    }
+    /* 图片logo设高 */
+    .service>div:last-child{
+        height:15.5rem;
+    }
+
+    /* 电商学院 */
+    .media{
+        width:31%;
+        padding: 2rem 0;
+        flex-flow: column nowrap;
+    }
+    .media>p,.news>p:first-child{
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        background: url(img/ar_t_bg.jpg) left bottom no-repeat;
+    }
+    .media>a{
+        padding: 1rem 0;
+        transition: 0.4s;
+    }
+    .media>a:hover,.news-bg a:hover{
+        color: #0A6DEE; 
+    }
+    .media a:last-child,.news>a:last-child{
+        color: #0A6DEE; 
+        align-self: flex-end;
+        margin-top: 1rem;
+    }
+    .media a:last-child:hover,.news>a:last-child:hover,.news>div+div a:hover{
+        text-decoration: underline;
+    }
+    .media>span{
+        font-size: 0.9rem;
+        color: #8d8d8d;
+    }
+    /* 第二行电商资讯 */
+    .news{
+        width: 31%;
+        flex-flow: column nowrap;
+        padding-bottom: 4rem;
+    }
+    .news-bg{
+        background: #F2F2F2;
+        padding: 2rem 1rem 0rem 1rem;
+    }
+    .news-bg a{
+        font-weight: 600;
+        transition: 0.4s;
+    }
+    .news-bg>p{
+        font-size: 0.8rem;
+        margin:1rem 0;
+    }
+    .news>div>em{
+        display: block;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: #666666;
+        margin: 0.5rem 0.8rem;
+        float: left;
+    }
+    .news>div+div{
+        margin-top:1rem;
+    }
+    .news>div+div a{
+        color: #585858;
+        font-size: 0.9rem;
+    }
+    /* 合作伙伴 */
+    .partner{
+        background: #F7F7F7;
+    }
+
     
