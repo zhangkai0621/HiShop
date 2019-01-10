@@ -8,10 +8,6 @@
         font-size: 1rem;
         margin:0.8rem 0; 
     }
-    .d-between{
-        display: flex;
-        justify-content:space-between;
-    }
     /* banner */
     .banner{
         height: 450px;
@@ -515,5 +511,6 @@
     .partner{
         background: #F7F7F7;
     }
-
-    
+    .partner>div:last-child{
+        padding-bottom:4rem; 
+    }

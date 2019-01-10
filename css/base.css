@@ -59,3 +59,11 @@ input {
     outline: none;
     vertical-align: middle;
 }
+.width{
+    width: 70%;
+    margin: 0 auto;
+}
+.d-between{
+    display: flex;
+    justify-content:space-between;
+}
