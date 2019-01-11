@@ -10,27 +10,70 @@
     }
     /* banner */
     .banner{
-        height: 450px;
-        background: url(img/banner1.jpg) no-repeat;
-        background-size:cover; 
-        position: relative;
-        transition: all 0.5s linear; 
-    }
-    .banChange{
-        /* animation: change 0.6s linear; */
-    }
-    @keyframes change{
-        0%{ width:0%;}
-        100%{ width:100%;}
+        /* background: url(img/banner1.jpg) no-repeat; */
+        position: relative;  
     }
     .banner>img{
-       width: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        opacity: 0.5;
+        transition: all 0.5s;
+    }
+    .banner>img.active{
+        z-index: 10;
+        opacity: 1;
+    }
+    /* 小圆点 */
+    .list{
+        position: absolute;
+        z-index: 20;
+        bottom: 5rem;
+        left:50%;
+        display: inline-block;
+    }
+    .item{
+        width: 1rem;
+        height:1rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        float: left;
+        margin-left:1rem;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .item.active{
+        background:#fff;
+    }
+    /* 按钮 */
+    .banner>button{
+        width:4rem;
+        height:4rem;
+        color: #666;
+        font-size: 1.5rem;
+        background: rgba(0,0,0,0.4);
+        border:1px solid #666;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 20;
+        transition: 0.4s; 
+    }
+    #prev{
+        left:5rem;
+    }
+    #next{
+        right:5rem;
+    }
+    .banner>button:hover{
+        color: #fff;
+        border: 1px solid #fff;
     }
     .banner_bottom{
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
         position: absolute;
-        bottom: 0;  
+        bottom: 0;
+        z-index: 20;
     }
     .banner-df a{
         color: #fff ;
@@ -38,8 +81,11 @@
         display: flex;
     }
     .banner-df>div{
-        padding: 0.7rem;
+        padding: 1rem 0.7rem;
         border-right: 0.03rem solid #999;
+    }
+    .banner-df>div:hover{
+        background: rgba(255,255,255,0.2)
     }
     /* 图标宽度&&每个项目的宽度 */
     .banner-df>div,.banner-df img{

@@ -25,22 +25,73 @@ $(function(){
 })();
 //banner轮播图
     (function(){
-       var banner=document.getElementsByClassName("banner")[0];
-       console.log(banner)
-       var i=1;
-       function change(){
-            if(i==6) i=1; 
-            if(i<6){
-                i++;
-                console.log(i);
-                banner.style.background=`url(img/banner${i}.jpg) no-repeat`;
-                banner.className="banner banChange";   
-            }
-            //banner.className="banner";  
-       }
-       var clear=setInterval(change,3000);
-    //    banner.onmouseover=function(){
-    //        clearInterval(clear);
-    //    }
+        var banner=document.getElementsByClassName("banner")[0];
+        var imgOne=document.querySelector(".banner>img");//轮播第一张图片,用于计算
+        var imgs=document.querySelectorAll(".banner>img");//所有的轮播图片
+        var list=document.getElementsByClassName("list")[0];//小圆点ul
+        var items=document.getElementsByClassName("item");//小圆点li
+        var btns=document.querySelectorAll(".banner>button");//点击按钮
+        var index=0;//表示第几张图片
+
+        banner.style.height=imgOne.offsetHeight+"px";//让banner的高度等于图片高度,避免banner高度坍塌
+        list.style.left=(imgOne.offsetWidth-list.offsetWidth)/2+"px";//计算小圆点的水平居中
+        //按钮位置垂直居中
+        for(var btn of btns){ btn.style.top=(imgOne.offsetHeight-btn.offsetHeight)/2+"px"; }
+        function clearClassName(){//清除img&&item的class
+            for(var img of imgs){ img.className=""; }
+            for(var item of items){ item.className="item"; }
+        }
+        function classNameActive(){//img&&item的class添加active
+            imgs[index].className="active";
+            items[index].className="item active";
+        }
+        function addIndex(){//index增加
+            clearClassName();
+            if(index<5) index++;
+            else index=0;
+        }
+        function reduceIndex(){//index减少
+            clearClassName();
+            if(index>0) index--; 
+            else  index=5; 
+        }
+        function itemChange(){
+            clearClassName();
+            classNameActive();
+        }
+        next.addEventListener("click",function(){//下一张
+            addIndex();//index++;
+            classNameActive();//下一张被激活
+        })
+        prev.addEventListener("click",function(){//上一张
+            reduceIndex();
+            classNameActive()
+        })
+        //小圆点点击
+        for(var item of items){
+            item.addEventListener("click",function(){
+                var item=this;
+                var itemIndex=item.getAttribute("data-target");//获取item的data-target属性
+                index=itemIndex;
+                itemChange();
+            })
+        }
+        var change=null;
+        function autoPlay(){//定义自动轮播函数
+            change=setInterval(function(){
+                addIndex();
+                classNameActive();
+            },3000)
+        }
+        autoPlay();
+        //鼠标移入清除定时器
+        banner.onmouseover=function(){
+            clearInterval(change);
+        }
+        //鼠标移出调用autoPlay
+        banner.onmouseout=function(){
+            autoPlay();
+        }
     })();
+    
 
