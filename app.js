@@ -13,7 +13,7 @@ var pool=mysql.createPool({
 });
 //创建服务器
 var server=express();
-server.listen(3000);
+server.listen(3005);
 //托管静态资源
 server.use(express.static('html'));
 server.use(express.static('css'));
