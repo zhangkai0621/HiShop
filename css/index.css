@@ -201,7 +201,8 @@
     }
     /* 移动云商场 */
     .shopMenu{
-        width: 100%;  
+        width: 100%; 
+        height:525px; 
     }
     .shopMenu img{
         width: 70%;
@@ -209,10 +210,11 @@
     /* 蓝色-移动云商城 */
     .cloudShop{
         width: 34%;
+        transition: 0.4s;
     }
     /* 蓝色-移动云商城 */
     .cloudShop>div:first-child{
-        padding: 1rem;
+        padding: 3rem 1rem;
         background: #0a6dee;
         
     }
@@ -247,8 +249,7 @@
         border: 0.05rem solid #0A6DEE;
     }
     .cloudShop>div p{
-        color: #fff;
-        
+        color: #fff;    
     }
     .shopOthers,.cloudShop>div:first-child{
         text-align: center;  
@@ -256,7 +257,8 @@
     /* 其他三个 */
     .shopOthers{
         width: 22%;
-        margin-top:1rem; 
+        margin-top:2rem; 
+        transition: 0.4s;
     }
     .shopOthers>div:first-child{
         background: #f3f3f3;
@@ -277,9 +279,20 @@
         color: #8d8d8d;
     }
 
+    /* 移动云商城用于JS */
+    .shopOthers.none,.cloudShop.none{
+        display: none;
+    }
+    .shopOthers.active,.cloudShop.active{
+        animation: changWidth 0.4s linear;
+    }
+    @keyframes changWidth{
+        0%{ width:30%;}
+        100%{ width:34%;}
+    }
     /* 微信营销小程序 */
     .wechat img{
-       width: 80%;
+        width: 80%;
     }
 
     .wechat>div:first-child{
@@ -464,7 +477,6 @@
         background-color: #fff;
         border-radius: 50%;
         padding:2.05rem 0rem;
-        /* margin-top:-0.5rem; */
         display: block;
     }
     .serChecked>h3{

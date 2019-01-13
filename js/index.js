@@ -4,7 +4,7 @@ $(function(){
     $("#footer").load("footer.html");
 });
 
-//解决方案
+//增值服务
 (function(){
     var serImgs=document.querySelectorAll(".serImg");  
     var checFatherDns=document.querySelectorAll(".checFatherDn"); 
@@ -93,5 +93,26 @@ $(function(){
             autoPlay();
         }
     })();
+
+//商城系统部分
+    (function(){
+        var cloudShops=document.getElementsByClassName("cloudShop");
+        var shopOthers=document.getElementsByClassName("shopOthers");
+        function clear(){
+            for(var i=0;i<4;i++){
+                shopOthers[i].className="shopOthers"
+                cloudShops[i].className="cloudShop none"
+            }
+        }
+        for( var shopOther of shopOthers){
+            shopOther.addEventListener("mouseenter",function(){
+                var key=this.getAttribute("data-key");
+                clear();
+                cloudShops[key].className="cloudShop active";
+                this.className="shopOthers none";    
+            })
+        }
+    })();
+
     
 

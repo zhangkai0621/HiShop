@@ -26,13 +26,14 @@
     }
     /* 头部logo&&导航栏 */
     .nav {
-        padding: 1rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem 0;
     }
     .nav a{
         font-size: 1rem;
+        
         vertical-align: middle;
     }
     /* logo图片样式 */
@@ -76,36 +77,61 @@
         border-radius: 0.2rem;
         background: #0A6DEE;
         color: #fff;    
-        align-self: flex-end;    
+        align-self: flex-end;  
     }
-    /* 下拉菜单栏 */
-    .dropMenu{
+    /* 下拉菜单栏 ——商城系统*/
+    @keyframes down{
+        0%{ height:0px }
+        100%{ height:430px }
+    }
+    @keyframes up{
+        0%{ height:430px }
+        100%{ height:0px; padding-bottom:0rem; }
+    }
+    .dropMenu-shop.down,.dropMenu-solution.down{
+        display: block;
+        animation: down 0.4s;
+    }
+    .dropMenu-shop.up,.dropMenu-solution.up{
+        display: block;
+        animation: up 0.4s;
+    }
+    .dropMenu-shop.active,.dropMenu-solution.active{
+        z-index: 99;
+    }
+    .dropMenu-shop{
         width: 100%;
+        display: none;
         background: #F2F2F2;
-        padding-top:2rem;
+        padding-bottom:2rem;
         position: absolute;
         top:84px;
-        z-index: 99;
+        overflow: hidden;
     }
     /* 下拉菜单栏标题部分 */
     .dropTitle>p{
         width: 25%;
         font-size: 1.5rem;
         padding:1rem 3rem;
+        margin-top:2rem;
     }
     .dropTitle>p:nth-child(2),
-    .dropTitle>p:nth-child(4){
+    .dropTitle>p:nth-child(4),{
         background: #dcdcdc;
     }
     .dropTitle>p:nth-child(1),
-    .dropTitle>p:nth-child(3){
+    .dropTitle>p:nth-child(3),
+    .soluTitle>p:nth-child(1),
+    .soluTitle>p:nth-child(3){
         background: #e9e9e9;
     }
-    .dropTitle>p:nth-child(1){
+    .dropTitle>p:nth-child(1),.soluTitle>p:nth-child(1){
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
     }
-    .dropTitle>p:nth-child(4){
+    .dropTitle>p:nth-child(4),
+    .soluTitle>p:nth-child(4),
+    .soluTitle>p:nth-child(3){
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
     }
@@ -137,14 +163,42 @@
     }
     .dropMore>a{
         float: right;
-        padding-bottom: 2rem;
         color: #0A6DEE;
     }
     .dropMore>a:hover{
         text-decoration: underline;
     }
+    /* 下拉菜单栏——解决方案 */
+    .dropMenu-solution{
+        width: 100%;
+        background: #F2F2F2;
+        padding-bottom:2rem;
+        position: absolute;
+        top:84px;
+        overflow: hidden;
+        display: none;
+    }
+    .soluTitle>p{
+        width: 33%;
+        font-size: 1.5rem;
+        padding:1rem 3rem;
+        margin-top:2rem;
+    }
+    .soluTitle>p:nth-child(2){
+        background: #dcdcdc;
+    }
+    .soluDetails>a em{
+        width: 100%;
+        height: 0.1rem;
+        background: #dcdcdc;
+        margin: 0.5rem 0;
+        display: block;
+    }
+    .soluDetails{
+        padding-bottom: 0rem;
+    }
     
-    
+
     
     
     
