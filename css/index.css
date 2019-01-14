@@ -173,7 +173,7 @@
 
     }
      /* 零售系统a 标签 */
-     .shopa{
+    .shopa{
         margin-top:1rem;
         margin-bottom: 2rem;
         width: 70%;
@@ -306,6 +306,7 @@
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        overflow: hidden;
     }
     .wechat_logo p{
         font-size: 1.1rem;
@@ -315,6 +316,21 @@
         font-size: 0.8rem;
         padding: 0 0.5rem;
         color: #8d8d8d;
+    }
+    .wechat_logo a{
+        /* display:none; */
+        color: #0f5ec5;
+        border:0.1rem solid #0a6dee;
+        border-radius: 2rem;
+        padding: 0.5rem 1rem;
+        margin-top:1rem;
+        position: relative;
+        bottom:-3rem;
+        transition:all 0.4s linear;
+    }
+    @keyframes wechat{
+        0%{ height:0px}
+        100%{ height:0px}
     }
     /* 解决方案 */
     .solution>div:first-child{

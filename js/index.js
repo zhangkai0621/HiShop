@@ -24,6 +24,7 @@ $(function(){
     }
 })();
 //banner轮播图
+window.onload=function(){
     (function(){
         var banner=document.getElementsByClassName("banner")[0];
         var imgOne=document.querySelector(".banner>img");//轮播第一张图片,用于计算
@@ -93,6 +94,7 @@ $(function(){
             autoPlay();
         }
     })();
+};
 
 //商城系统部分
     (function(){
@@ -105,7 +107,7 @@ $(function(){
             }
         }
         for( var shopOther of shopOthers){
-            shopOther.addEventListener("mouseenter",function(){
+            shopOther.addEventListener("mouseover",function(){
                 var key=this.getAttribute("data-key");
                 clear();
                 cloudShops[key].className="cloudShop active";
@@ -113,6 +115,17 @@ $(function(){
             })
         }
     })();
+
+//商城小程序
+(function(){
+ var $wechats=$(".wechat_logo");
+    $wechats.mouseover(function(){
+        $(this).children("a").css("bottom",0);
+    }) 
+    $wechats.mouseout(function(){
+        $(this).children("a").css("bottom","-3rem");
+    })
+})();
 
     
 
