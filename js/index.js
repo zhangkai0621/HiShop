@@ -74,7 +74,7 @@ window.onload=function(){
                 var item=this;
                 var itemIndex=item.getAttribute("data-target");//获取item的data-target属性
                 index=itemIndex;
-                itemChange();
+                itemChange();   
             })
         }
         var change=null;
@@ -127,5 +127,12 @@ window.onload=function(){
     })
 })();
 
+//解决方案蓝色详情页
+//DOMContentLoaded
+$(function(){
+    $(".solution-img>div").hover(function(){
+        $(this).children(".soluBlue").toggleClass("top");
+    })
+})
     
 

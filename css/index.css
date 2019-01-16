@@ -361,19 +361,49 @@
     .solution-img{
         margin-bottom: 4rem;
     }
-    .solution-img div{
+    .solution-img>div{
         width: 25%;
         text-align: center;
         border-right: 1px solid #fff;
+        overflow: hidden;
+        position: relative;
     }
-    .solution-img img{
+    .solution-img>div>img{
         width: 100%;
     }
-    .solution-img p{
+    .solution-img>div>p{
         background: #343434;
         color: #fff;
         padding: 2rem 1rem;
         font-size: 1.5rem;
+    }
+    /*蓝色详情部分*/
+   
+    .soluBlue{
+    	background: #0A6DEE;
+    	color: #fff;
+    	padding: 2rem 1rem;
+    	position:absolute;
+        top:28rem;
+        transition: all 0.4s;
+    }
+    .soluBlue.top{
+        top:0rem;
+    }
+    .soluBlue>h3{
+    	font-size: 1.5rem;
+    	margin:1rem;
+    }
+    .soluBlue>p{
+    	margin:2rem;
+    }
+    .soluBlue>a{
+    	display: inline-block;
+    	margin:1.65rem;
+    	padding: 0.7rem 2rem;
+    	background: #fff;
+    	color: #0A6DEE;
+    	border-radius: 0.5rem;
     }
     /* 客户案例 */
     .cases{
