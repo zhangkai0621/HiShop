@@ -1,0 +1,99 @@
+
+    .footer{
+        background: #393b3d;
+        padding: 2rem 1rem;
+    }
+    .footLogo{
+        color: #fff;
+        padding: 2rem 0rem;
+        border-bottom: 0.01rem solid #616264;
+    }
+    .footLogo em{
+        width: 1px;
+        height: 30px;
+        background: #9c9d9e;
+        margin-top: 5px;
+    }
+    .footLogo>p span,.footLogo>div>p span{
+        font-size: 1.2rem;
+    }
+    .footLogo>p{
+        font-size: 1.3rem;
+    }
+    .footLogo>div p{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        float: right;
+    }
+    /* 超链接部分 */
+    .footA{
+        padding: 2rem 0rem;
+    }
+    .footA a{
+        color: #c0c1c1;
+    }
+    .footA a:hover,.footLast a:hover{
+        text-decoration: underline;
+    }
+    .footA a+a{
+        border-left:0.08rem solid #c0c1c1;
+        padding-left:2.3rem;  
+    }
+    /* 软件编号部分 */
+    .footText{
+        color: #888989;
+        font-size: 0.8rem;
+        padding: 1rem 0;
+    }
+    .footWx{
+       color: #fff; 
+    }
+    .footWx a{
+        display: inline-block;
+        clear: both;
+        color: #c0c1c1;
+        padding: 0.5rem 1.7rem;
+        margin:2rem 3rem 0 0;
+        border: 1px solid #616264;
+        border-radius: 0.4rem;
+        transition: 0.4s;
+    }
+    .footWx a:hover{
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .footWx a,.footWx span{
+        float: left;
+    }
+    /* 警徽部分 */
+    .footLast{
+        padding: 1rem 0;
+    }
+    .footLast a,.footLast span{
+        color: #c0c1c1;
+        padding: 0 0.5rem;  
+    }
+    .footLast a:nth-child(2),.footLast a:nth-child(3){
+        border-right: 1px solid #c0c1c1;
+    }
+    .footLast>div:last-child{
+        align-items: center;
+    }
+
+     /* 1200px~1600px */
+     @media screen and (max-width:1600px){
+        .footLogo>p span,.footLogo>div>p span,.footLogo>p{
+            font-size: 1rem;
+        }
+        .footWx a{
+            /* 取消清楚浮动 */
+            clear: right; 
+            margin: 2rem 0rem 0 0;
+        }
+        .footLogo>div p{
+            font-size: 1.3rem;
+        }
+     }
+
+    
+    

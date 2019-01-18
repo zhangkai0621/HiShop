@@ -1,0 +1,11 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS HiShop;
+CREATE DATABASE HiShop CHARSET=UTF8;
+USE HiShop;
+CREATE TABLE userCase(
+	uid	TINYINT PRIMARY KEY,
+    title   VARCHAR(20),
+	userUrl 	VARCHAR(30),
+	mode    VARCHAR(30),
+    achievement   VARCHAR(100)
+)
