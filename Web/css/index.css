@@ -415,24 +415,25 @@
     }
     .cases-logo>div{
         width: 100%;
+        height:92px;
         margin:1rem 0;
     }
     /* 图标透明度设置 */
     .cases-logo>div>div{
-        opacity: 0.6;
+        opacity: 0.5;
     }
     /* 图片选中class，用于JS操作 */
-    .img-checked{
+    .img-unchecked.active{
         opacity: 1 !important;
     }
-    .img-checked>img:first-child{
-        border:0.1rem solid #0A6DEE;
+    .img-unchecked.active>img:first-child{
+        border:0.15rem solid #0A6DEE;
     }
     /* 倒三角图标 */
-    .img-checked>img:last-child{
+    .img-unchecked.active>img:last-child{
         display: block;
         margin: 0 auto;
-        margin-top:-0.05rem;
+        margin-top:-0.1em;
     }
     /* 未选中的div，倒三角隐藏 */
     .img-unchecked>img:last-child{
@@ -635,7 +636,7 @@
         padding-bottom:4rem; 
     }
 
-    /* 1200px~1600px */
+    /* 1400px~1600px */
     @media screen and (max-width:1600px){
         /* 商城系统 */
         .cloudShop>div:last-child h3{
@@ -679,8 +680,70 @@
        .cases-details>table {
             padding: 2rem 1rem;
         }
-        .img-checked>img:last-child{
-            margin-top: -0.1rem;
+        .img-unchecked.active>img:last-child{
+            margin-top: -0.15rem;
         }
 
+    }
+
+    /* 1400px */
+    @media screen and (max-width:1400px){
+        .banner-text>b{
+            font-size: 0.8rem;
+        }
+        .banner-df span {
+            font-size: 10px;
+        }
+        .system>div {
+            width: 49%;
+            padding: 1rem 0rem;
+        }
+        .system p {
+            font-size: 0.9rem;
+        }
+        .cloudShop>div:last-child {
+            padding: 1rem 0rem 1rem 1.5em;
+        }
+        .cloudShop>div:first-child {
+            padding: 2rem 1rem;
+        }
+        .shopSystem p {
+            font-size: 0.8rem;
+        }
+        .solution-img>div>p{
+            font-size: 1.1rem;
+        }
+        .soluBlue>p {
+            margin: 0rem;
+        }
+        .soluBlue>h3{
+            font-size: 1rem;
+            margin:1rem 0;
+        }
+        .soluBlue>a{
+            padding: 0.7rem 1rem;
+        }
+        .cases-logo>div>div{
+            width:16%;
+        }
+        .cases-logo>div>div>img:first-child{
+            width:100%;
+        }
+        .cases-details>img{
+            width: 60%;
+            height: 300px;
+        }
+        .cases-details>table>tbody>tr>td {
+            width: 17%;
+            font-size: 0.9rem;
+        }
+        .cases-details>table {
+            padding: 2rem 0rem 2rem 1rem;
+        }
+        .serChecked{
+            padding: 2.05rem 0rem;
+        }
+        .checFather {
+            width: 31%;
+        }
     }

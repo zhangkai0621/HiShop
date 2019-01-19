@@ -24,7 +24,7 @@ $(function(){
     }
 })();
 //banner轮播图
-window.onload=function(){
+
     (function(){
         var banner=document.getElementsByClassName("banner")[0];
         var imgOne=document.querySelector(".banner>img");//轮播第一张图片,用于计算
@@ -96,7 +96,7 @@ window.onload=function(){
             $("#prev").css("left","-5rem").next().css("right","-5rem");
         }
     })();
-};
+
 
 //商城系统部分
     (function(){
@@ -143,6 +143,40 @@ $(function(){
         $(this).toggleClass("active");
     })
 })
+
+// Ajax异步加载
+$(function(){
+    var $imgs=$(".img-checked>img:first,.img-unchecked>img:first-child");
+    var $divs=$(".img-checked,.img-unchecked");
+    $imgs.click(function(){
+        $imgs.parent(".img-unchecked").removeClass("active");
+        $(this).parent(".img-unchecked").addClass("active")
+        //获取自定义属性data-lid
+        var lid=$(this).attr("data-lid");
+        $.ajax({
+            url:"http://localhost:3005/index",
+            type:"get",
+            data:{lid},
+            dataType:"json",
+            success:function(data){
+                var obj=data[0];
+                //console.log(obj);
+                //动态插入数据
+                //图片
+                $(".cases-details>img").attr("src",`${obj.src}`);
+                //标题
+                $(".cases-details>table>tbody th").html(`${obj.title}`);
+                 //网址
+                 $(".cases-details>table>tbody td").eq(1).html(`${obj.userUrl}`);
+                //模式
+                $(".cases-details>table>tbody td").eq(3).html(`${obj.mode}`);
+                //成果
+                $(".cases-details>table>tbody td").eq(5).html(`${obj.achievement}`); 
+            }
+        })
+    })
+});
+
 
 
     

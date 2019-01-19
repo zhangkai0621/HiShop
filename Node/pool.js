@@ -6,8 +6,8 @@ var pool=mysql.createPool({
 	port:'3306',
 	user:'root',
 	password:'',
-	database:'HiShop',
+	database:'hishop',
 	connectionLimit:20	
 });
 //把创建好的连接池导出
-module.exports =pool;
+module.exports=pool;

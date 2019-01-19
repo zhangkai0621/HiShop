@@ -13,8 +13,7 @@
     }
     .head_top {
         padding: 0.3rem 0;
-        display: flex;
-        justify-content: space-between;
+        flex-flow: row wrap;
     }
     .head_top p,.head_top li{
         font-size: 0.8rem;
@@ -26,8 +25,6 @@
     }
     /* 头部logo&&导航栏 */
     .nav {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
     }
@@ -38,7 +35,7 @@
     }
     /* logo图片样式 */
     .nav a:first-child img{
-        width: 75%;
+        width: 100%;
     }
     .drop_img{
         width: 12%;
@@ -198,7 +195,7 @@
         padding-bottom: 0rem;
     }
 
-    /* 1200px~1600px */
+    /* 1400px~1600px */
     @media screen and (max-width:1600px){
         @keyframes down{
             0%{ height:0px }
@@ -217,6 +214,38 @@
         .dropDetails>a{
             padding: 1rem 2rem;
         }
+    }
+    @media screen and (max-width:1450px){
+        @keyframes down{
+            0%{ height:0px }
+            100%{ height:450px }
+        }
+        @keyframes up{
+            0%{ height:450px }
+            100%{ height:0px; padding-bottom:0rem; }
+        }
+        .head_top>p,.head_top>ul{
+            width:100%;
+        }
+        .head_top li{
+            padding: 1rem 0;
+        }
+        .nav a:first-child{
+            width: 25%;
+        }
+        .nav a,.nav a:last-child,.nav a:nth-child(9){
+            font-size: 0.9rem;
+        }
+        .nav a:nth-child(9){
+            padding: 0.1rem 1rem;
+        }
+        .dropTitle>p{
+            padding: 1rem 1rem;
+        }
+        .dropDetails>a span {
+            font-size: 1rem;
+        }
+
     }
     
 
