@@ -6,11 +6,9 @@ router.get("/",(req,res)=>{
         "Access-Control-Allow-Origin":"*"
       });
     var lid=req.query.lid;
-    console.log(lid);
     var sql="select * from usercase where lid=?";
     pool.query(sql,[lid],(err,result)=>{
         if(err) throw err;
-        console.log(result);
         res.write(JSON.stringify(result));
         res.end();
     })

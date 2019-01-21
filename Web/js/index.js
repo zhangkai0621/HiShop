@@ -160,7 +160,6 @@ $(function(){
             dataType:"json",
             success:function(data){
                 var obj=data[0];
-                //console.log(obj);
                 //动态插入数据
                 //图片
                 $(".cases-details>img").attr("src",`${obj.src}`);

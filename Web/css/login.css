@@ -1,0 +1,97 @@
+    /* 头部导航栏 */
+    .head{
+        background: #5b5148;
+    }
+    .nav{
+        align-items: center;
+        padding: 2rem;
+    }
+    .nav>ul>li{
+        float: left;
+        padding-left: 2rem;
+    }
+    .nav>ul>li>a{
+        color: #fff;
+        transition: all 0.4s;
+    }
+    .nav>ul>li>a:hover{
+        color:#fe6a08;
+    }
+    /* 用户登录 */
+    .main{
+        padding: 4rem 0;
+        background: #fe6a08 url(img/zhaohuim.jpg) center no-repeat;
+    }
+    .white{
+        background: #f8f8f8;
+    }
+    .white>img{
+        margin:4rem 4rem;
+    }
+    .title{
+        padding-bottom: 1rem;
+    }
+    .title>span:first-child{
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    .title>span:nth-child(2){
+        width: 5px;
+        height:10px;
+       border: 1px solid #fff;
+       margin-right: 1rem;
+    }
+    .title>a{
+        font-weight: bold;
+        color: #ffde00
+    }
+    .form{
+        width: 40%;
+        padding: 4rem 4rem;
+		flex-flow: column nowrap;
+    }
+    .form>img,.form>input,.form>button,.from>p,.form>span{
+        display: block;
+        margin: 0 auto;
+    }
+    .form>input{
+        width:70%;
+        font-size: 1rem;
+        padding: 1rem 1rem 1rem 2rem;
+        margin-top: 1rem;
+        border-bottom: 1px solid #dadada;
+    }
+    #userName{
+        background:url(img/hh.jpg) 0 center no-repeat;
+    }
+    #userPwd{
+        background:url(img/login_16.jpg) 0 center no-repeat;
+    }
+    .form>button{
+        width:80%;
+        padding: 0.8rem 1rem;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        background: #ff6600;
+    }
+    .form>span{
+        height:20px;
+        font-size: 0.9rem;
+        color: #bcbcbc;
+        padding-left: 3rem;
+        margin:1rem 0;  
+    }
+    .form>span>img{
+        margin-left: 0.5rem;
+    }
+    .form>p{
+        float: right;
+        color:#bcbcbc;
+        margin: 1rem 3rem 0 0;
+    }
+    .form>p>a{
+        color: #fe6a08;
+    }
+    

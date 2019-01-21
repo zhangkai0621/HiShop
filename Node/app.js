@@ -1,8 +1,10 @@
 //使用express构建web服务器 --11:25
 const express = require('express');
 const bodyParser = require('body-parser');
-/*引入路由模块*/
-const index=require("./routes/index_route");
+//引入路由模块
+const index=require("./routes/index-route");
+//引入登录模块
+const login=require("./routes/login-route");
 
 
 var app = express();
@@ -15,4 +17,5 @@ app.use(express.static('../Web/css'))
 app.use(express.static('../Web/js'))
 /*使用路由器来管理路由*/
 app.use("/index",index);
-//测试: http://localhost:3000/details?lid=9
+app.use("/login",login);
+
