@@ -1,0 +1,122 @@
+	/* 头部导航栏 */
+	.head{
+	    background: #5b5148;
+	}
+	.nav{
+	    align-items: center;
+	    padding: 2rem;
+	}
+	.nav>ul>li{
+	    float: left;
+	    padding-left: 2rem;
+	}
+	.nav>ul>li>a{
+	    color: #fff;
+	    transition: all 0.4s;
+	}
+	.nav>ul>li>a:hover{
+	    color:#fe6a08;
+	}
+	/* 用户登录 */
+	.main{
+	    padding: 4rem 0;
+	    background: #0a6dee url(img/loginbg_02.jpg) center no-repeat;
+	}
+	.white{
+	    background: #f8f8f8;
+	}
+	.white>img{
+		display: block;
+	    margin:5rem auto;
+	}
+	.title{
+	    padding-bottom: 1rem;
+	}
+	.title>span{
+		color: #fff;
+	}
+	.title>span:first-child{
+	    font-size: 1.5rem;
+	    margin-right: 1rem;
+	}
+	.title>span:nth-child(2){
+	   width: 5px;
+	   height:10px;
+	   border: 1px solid #fff;
+	   margin-right: 1rem;
+	}
+	.title>a{
+	    font-weight: bold;
+	    color: #ffde00
+	}
+	.form{
+	    width:50%;
+	    padding: 4rem 4rem;
+		flex-flow: column nowrap;
+	}
+	.form>img,.form>input,.form>button,.from>p,.form>span,label{
+	    display: block;
+	    margin: 0 auto;
+	}
+	.form>input,.form>div>input{
+	    width:50%;
+	    font-size: 1rem;
+	    padding: 0.8rem 1rem 0.8rem 2rem;
+	    border: 1px solid #dadada;
+	}
+	label{
+		color: #666;
+		margin-left:9rem;
+	}
+	label>a{
+		color:#0a6dee;
+	}
+	label>a:hover{
+		text-decoration: underline;
+	}
+	#userName{
+	    background:url(img/hh.jpg) 3px center no-repeat;
+	}
+	#userPwd{
+	    background:url(img/login_16.jpg) 4px center no-repeat;
+	}
+	#phone{
+		background: url(img/login_10.jpg) 4px center no-repeat;
+	}
+	#code{
+		width:54%;
+		background: url(img/login_13.jpg) 4px center no-repeat;
+	}
+	#getCode{
+		width: 33%;
+		padding: 0.8rem;
+	}
+	/* 手机验证码 */
+	.form>div{
+		width:58%;
+		margin: 0 auto;
+	}
+	.form>div>input:last-child{
+		background: #ff6600;
+		color: #fff;
+		cursor: pointer;
+	}
+	.form>button{
+	    width:58%;
+	    padding: 0.8rem 1rem;
+	    color: #fff;
+	    font-size: 1rem;
+	    border-radius: 0.5rem;
+	    background: #0A6DEE;
+	}
+	/* 提示语 */
+	.form>span{
+	    height:20px;
+	    font-size: 0.9rem;
+	    color: #0A6DEE;
+	    margin:0.5rem 0 0.5rem 9rem;
+	}
+	.form>span>img{
+	    margin-left: 0.5rem;
+	}
+	

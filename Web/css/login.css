@@ -26,7 +26,8 @@
         background: #f8f8f8;
     }
     .white>img{
-        margin:4rem 4rem;
+		display: block;
+        margin:5rem auto;
     }
     .title{
         padding-bottom: 1rem;
@@ -59,10 +60,10 @@
         width:70%;
         font-size: 1rem;
         padding: 1rem 1rem 1rem 2rem;
-        margin-top: 1rem;
         border-bottom: 1px solid #dadada;
     }
     #userName{
+		margin-bottom: 2rem;
         background:url(img/hh.jpg) 0 center no-repeat;
     }
     #userPwd{
@@ -80,14 +81,14 @@
         height:20px;
         font-size: 0.9rem;
         color: #bcbcbc;
-        padding-left: 3rem;
-        margin:1rem 0;  
+        padding-left: 4rem;
+        margin:1rem 0; 
     }
     .form>span>img{
         margin-left: 0.5rem;
     }
     .form>p{
-        float: right;
+        align-self: flex-end;
         color:#bcbcbc;
         margin: 1rem 3rem 0 0;
     }
