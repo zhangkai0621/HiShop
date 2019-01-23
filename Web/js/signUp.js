@@ -16,11 +16,7 @@ $(function(){
 		}
 	}
 	$("#userName").focus(function(){
-<<<<<<< HEAD
 	    getFocus($(this),"用户名为4~12位字母、数字、汉字或下划线");
-=======
-	    getFocus($(this),"用户名为4~12位字母或数字");
->>>>>>> 1815c40bbd7c0848376a39c6ab02e109d6d79201
 	})
 	$("#phone").focus(function(){
 	    getFocus($(this),"手机号码为11位");
