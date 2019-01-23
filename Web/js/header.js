@@ -38,3 +38,32 @@
         setTimeout(function(){ clearSolu() },400);
     })
 })();
+
+//登录之后
+$(function(){
+    var search=location.search;
+    if(search!==""){
+    //获取查询字符串uid
+    var uid=search.split("=")[1];   
+    $.ajax({
+        url:"http://localhost:3005/index/login",
+        type:"get",
+        data:{uid},
+        dataType:"json",
+        success(res){
+            var uname=res[0].uname;//获取用户登录的uname
+            console.log(uname);
+            $("#signUp").html("注销");
+            $("#login").html(`${uname},欢迎回来!`).css({
+                color:"#fff",
+                background:"#0A6DEE",
+                padding:"0.3rem 1.3rem"
+            })
+            $("#signUp,#login").prop("href","javascript:;").click(function(){
+                alert("注销成功");
+                location.replace('http://127.0.0.1:3005/index.html');
+            })
+        }
+    })
+    }
+})

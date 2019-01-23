@@ -10,8 +10,6 @@ router.post("/",(req,res)=>{
 		if(err) throw err;
 		res.write(JSON.stringify(result));
 		res.end();
-		console.log(result)
 	})
 })
-
 module.exports=router;

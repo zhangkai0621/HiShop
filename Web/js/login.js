@@ -27,19 +27,11 @@ $(function(){
 				type:"post",
 				data:{uname,upwd},
 				dataType:"json",
-				success:function(res){
+				success(res){
 					if(res.length>0){
-						var s=3;
-						$("#userPwd").next().html(`登录成功,${s}秒后跳转到主页`).css("color","green");
-						setInterval(function(){
-							if(s>0){
-								s--;
-								$("#userPwd").next().html(`登录成功,${s}秒后跳转到主页`).css("color","green");
-							}else{
-								location.href='http://127.0.0.1:3005/index.html';
-							}
-						},1000)
-						
+						var uid=res[0].uid;
+						alert("登录成功,欢迎回来")
+						location.href=`http://127.0.0.1:3005/index.html?uid=${uid}`;
 					}else{
 						$("#userName,#userPwd").css("border-bottom","2px solid red");
 						$("#userPwd").next().html(`账号或密码不正确,请重新登录!`).css("color","red");

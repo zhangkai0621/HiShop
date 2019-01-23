@@ -14,10 +14,11 @@ CREATE TABLE cases(
 CREATE TABLE userinfo(
 	uid TINYINT PRIMARY KEY AUTO_INCREMENT,
 	uname VARCHAR(20),
-	upwd	VARCHAR(8)
+	upwd	VARCHAR(8),
+	phone	VARCHAR(11)
 );
 
-INSERT INTO userinfo VALUES (NULL,18508457621,'zhangkai');
+INSERT INTO userinfo VALUES (NULL,'richard','zhangkai',18508457621);
 
 
 INSERT INTO `cases` (`lid`, `src`, `title`, `userUrl`, `mode`, `achievement`) VALUES

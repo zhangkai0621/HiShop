@@ -3,7 +3,6 @@ $(function(){
     $("#header").load("header.html");
     $("#footer").load("footer.html");
 });
-
 //增值服务
 (function(){
     var serImgs=document.querySelectorAll(".serImg");  
@@ -24,7 +23,6 @@ $(function(){
     }
 })();
 //banner轮播图
-
     (function(){
         var banner=document.getElementsByClassName("banner")[0];
         var imgOne=document.querySelector(".banner>img");//轮播第一张图片,用于计算
@@ -96,8 +94,6 @@ $(function(){
             $("#prev").css("left","-5rem").next().css("right","-5rem");
         }
     })();
-
-
 //商城系统部分
     (function(){
         var cloudShops=document.getElementsByClassName("cloudShop");
@@ -128,7 +124,6 @@ $(function(){
         $(this).children("a").css("bottom","-3rem");
     })
 })();
-
 //解决方案蓝色详情页
 //DOMContentLoaded
 $(function(){
@@ -143,7 +138,6 @@ $(function(){
         $(this).toggleClass("active");
     })
 })
-
 // Ajax异步加载
 $(function(){
     var $imgs=$(".img-checked>img:first,.img-unchecked>img:first-child");
@@ -175,7 +169,27 @@ $(function(){
         })
     })
 });
-
+/*
+//登录之后
+$(function(){
+    var search=location.search;
+    if(search!==""){
+    //获取查询字符串uid
+    var uid=search.split("=")[1];   
+    console.log(uid);
+    $.ajax({
+        url:"http://localhost:3005/index/login",
+        type:"get",
+        data:{uid},
+        dataType:"json",
+        success(res){
+            var uname=res[0].uname;//获取用户登录的uname
+            console.log(uname);
+        }
+    })
+    }
+})
+*/
 
 
     
