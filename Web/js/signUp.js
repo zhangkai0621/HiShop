@@ -62,11 +62,7 @@ $(function(){
 	}
 	var name="",phone="",code="",pwd="";
 	$("#userName").blur(function(){
-<<<<<<< HEAD
 		name=getBlur($(this),/^[a-zA-Z0-9_\u4e00-\u9fa5]{4,12}$/,"用户名格式不正确");
-=======
-		name=getBlur($(this),/^[a-zA-Z0-9]{4,12}$/,"用户名格式不正确");
->>>>>>> 1815c40bbd7c0848376a39c6ab02e109d6d79201
 	});
 	$("#phone").blur(function(){
 		phone=getBlur($(this),/^1[34578]\d{9}$/,"手机号码格式不正确");
@@ -93,7 +89,6 @@ $(function(){
 					if(res=="200 OK"){
 						alert("注册成功");
 						location.href='http://127.0.0.1:3005/login.html';
-						
 					}else{
 						alert("用户名已被占用")
 					}
