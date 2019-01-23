@@ -16,7 +16,11 @@ $(function(){
 		}
 	}
 	$("#userName").focus(function(){
+<<<<<<< HEAD
 	    getFocus($(this),"用户名为4~12位字母、数字、汉字或下划线");
+=======
+	    getFocus($(this),"用户名为4~12位字母或数字");
+>>>>>>> 1815c40bbd7c0848376a39c6ab02e109d6d79201
 	})
 	$("#phone").focus(function(){
 	    getFocus($(this),"手机号码为11位");
@@ -58,7 +62,11 @@ $(function(){
 	}
 	var name="",phone="",code="",pwd="";
 	$("#userName").blur(function(){
+<<<<<<< HEAD
 		name=getBlur($(this),/^[a-zA-Z0-9_\u4e00-\u9fa5]{4,12}$/,"用户名格式不正确");
+=======
+		name=getBlur($(this),/^[a-zA-Z0-9]{4,12}$/,"用户名格式不正确");
+>>>>>>> 1815c40bbd7c0848376a39c6ab02e109d6d79201
 	});
 	$("#phone").blur(function(){
 		phone=getBlur($(this),/^1[34578]\d{9}$/,"手机号码格式不正确");
@@ -75,7 +83,6 @@ $(function(){
 			var uname=$("#userName").val();
 			var uphone=$("#phone").val();
 			var upwd=$("#userPwd").val();
-			console.log(uphone);
 			$.ajax({
 				url:"http://localhost:3005/signup",
 				type:"post",
