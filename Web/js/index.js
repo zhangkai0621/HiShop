@@ -169,28 +169,6 @@ $(function(){
         })
     })
 });
-/*
-//登录之后
-$(function(){
-    var search=location.search;
-    if(search!==""){
-    //获取查询字符串uid
-    var uid=search.split("=")[1];   
-    console.log(uid);
-    $.ajax({
-        url:"http://localhost:3005/index/login",
-        type:"get",
-        data:{uid},
-        dataType:"json",
-        success(res){
-            var uname=res[0].uname;//获取用户登录的uname
-            console.log(uname);
-        }
-    })
-    }
-})
-*/
-
 
     
 
